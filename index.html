@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>專屬雙人日曆 (Google Drive 版)</title>
+  
+  <!-- 1. 載入 FullCalendar 日曆套件 -->
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
   
-  <!-- 引入 Google API -->
+  <!-- 2. 提前載入 app.js，確保函數已經定義 -->
+  <script src="app.js"></script>
+
+  <!-- 3. 載入 Google API -->
   <script src="https://accounts.google.com/gsi/client" async defer onload="gisLoaded()"></script>
   <script src="https://apis.google.com/js/api.js" async defer onload="gapiLoaded()"></script>
 
@@ -37,6 +42,5 @@
 
   <div id="calendar" style="display: none;"></div>
 
-  <script src="app.js"></script>
 </body>
 </html>
